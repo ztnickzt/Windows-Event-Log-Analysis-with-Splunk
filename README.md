@@ -32,7 +32,7 @@ Opened Windows Event Viewer and navigated to the Security logs. Reviewed authent
 
 3: Event ID 4624, 4625 Identification
 
-Located Event ID 4624 in the Security logs. Event ID 4624 represents a successful logon attempts and Event ID 4625 represents a failed logon.
+Located Event ID 4624 and 4625 in the Security logs. Event ID 4624 represents a successful logon attempts while Event ID 4625 represents a failed logon.
 
 4: Windows Security Log Export
 
