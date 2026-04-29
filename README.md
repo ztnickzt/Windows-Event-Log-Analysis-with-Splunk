@@ -20,6 +20,10 @@ This project involved importing Windows Security Event Logs into Splunk to analy
 - SPL — Used to write searches for successful logons, failed logons, and suspicious authentication patterns.
 - Windows Host/VM — Used to generate authentication events for analysis.
 
+# Windows-Event-Log-Analysis-with-Splunk
+
+> **Disclaimer:** This lab was originally completed in March. My Splunk Enterprise Trial license has since expired, so I am currently unable to access the original Splunk environment to capture additional screenshots. Because of this, the screenshots included are limited to the ones I took while recreating this write-up.
+
 ## Steps
 
 1: Windows Log Activity Generation
@@ -34,7 +38,8 @@ Opened Windows Event Viewer and navigated to the Security logs. Reviewed authent
 
 Located Event ID 4624 and 4625 in the Security logs. Event ID 4624 represents a successful logon attempts while Event ID 4625 represents a failed logon.
 
-<img width="1920" height="1009" alt="Event Viewer 4_28_2026 12_45_37 AM" src="https://github.com/user-attachments/assets/004fe3f3-62b0-40b4-bf76-dfbb4e2bd29e" />
+<img width="1920" height="1009" alt="Event Viewer 4_28_2026 7_38_40 PM" src="https://github.com/user-attachments/assets/6c83e3a8-01b5-4a72-8a60-77ffdcbfa646" />
+
 
 
 4: Windows Security Log Export
@@ -53,6 +58,8 @@ Imported the Windows Security Event Logs into Splunk. This allowed the authentic
 Used Splunk to search for both successful and failed login events.
 
 index=* (EventCode=4624 OR EventCode=4625)
+
+
 
 This query returned Windows authentication events related to both successful and failed logon activity.
 
